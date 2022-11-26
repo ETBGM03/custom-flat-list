@@ -26,7 +26,7 @@ interface CustomFlatList<ItemD> {
   style?: StyleProp<ViewStyle>;
 }
 
-function CustomFlatList(props: CustomFlatList<any>) {
+function CustomFlatList<ItemD = any>(props: CustomFlatList<ItemD>) {
   const {
     data,
     listHeaderComponent,
@@ -40,6 +40,7 @@ function CustomFlatList(props: CustomFlatList<any>) {
     style,
     ...rest
   } = props;
+
   const HeaderComponent = listHeaderComponent
     ? listHeaderComponent
     : () => null;
@@ -50,7 +51,7 @@ function CustomFlatList(props: CustomFlatList<any>) {
 
   let scrollRef = useRef();
 
-  const _keyExtractor = (items: any, index: number): string => {
+  const _keyExtractor = (items: ItemD, index: number): string => {
     const keyExtractor = customKeyExtractor ?? keyExtractorDefault;
 
     return keyExtractor(items, index);

@@ -1,5 +1,4 @@
-import {Button, SafeAreaView} from 'react-native';
-import React, {Fragment, useCallback, useEffect, useState} from 'react';
+import React, {useCallback, useEffect, useState} from 'react';
 import _ from 'lodash';
 
 import CustomFlatList from '../components/custom-fatlist';
@@ -29,7 +28,7 @@ const Home = () => {
     getProducts();
   }, [setProducts, offset]);
 
-  const handlePress = () => {
+  const handleNextData = () => {
     setOffset(offset + 10);
   };
 
@@ -43,10 +42,10 @@ const Home = () => {
       <CustomFlatList
         onEndReachedThreshold={0.5}
         data={products}
-        customRenderItem={(item: any) => renderItem(item)}
+        customRenderItem={item => renderItem(item)}
         showsVerticalScrollIndicator={false}
         ListEmptyComponent={() => <Empty />}
-        onEndReached={() => handlePress()}
+        onEndReached={() => handleNextData()}
       />
     </SafeAreHome>
   );
