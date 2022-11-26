@@ -27,6 +27,7 @@ function CardItem(props: Welcome) {
       <ImageItem
         source={{
           uri: `${url}`,
+          cache: 'force-cache',
         }}
       />
       <TextItem>{props.title || 'No data'}</TextItem>

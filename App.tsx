@@ -2,7 +2,7 @@ import React from 'react';
 import {useColorScheme} from 'react-native';
 import {ThemeProvider} from 'styled-components';
 
-import Home from './src/pages/Home';
+import Home from './src/screens/Home';
 import {
   CustomFlatListDarkTheme,
   CustomFlatListTheme,

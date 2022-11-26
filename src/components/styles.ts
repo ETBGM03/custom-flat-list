@@ -7,14 +7,15 @@ export const Container = styled.View`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-vertical: 10px;
+  margin: 10px 0;
 `;
 
 export const ImageItem = styled.Image`
-  width: 60px;
-  height: 60px;
+  width: 70px;
+  height: 70px;
   border-radius: 10px;
   resize-mode: cover;
+  margin-bottom: 7px;
 `;
 
 export const TextItem = styled.Text<{fontSize?: number}>`
