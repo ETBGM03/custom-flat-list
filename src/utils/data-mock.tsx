@@ -1,3 +1,5 @@
+//This data was taken as an example to see the render item of the falt list work
+
 export const DataMock = [
   {
     id: 1,
