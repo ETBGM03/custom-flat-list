@@ -33,7 +33,7 @@ const Home = () => {
 
   const handleNextData = useCallback(() => {
     setOffset(offset + 10);
-  }, [setOffset, offset]);
+  }, [offset]);
 
   const renderItem = useCallback(
     (item: any) => <CardItem key={`card-item-${item.id}`} {...item} />,
