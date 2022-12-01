@@ -12,3 +12,13 @@ export const LoaderIndicator = styled(ActivityIndicator).attrs({
 })`
   flex: 1;
 `;
+
+export const Header = styled.View`
+  width: 100%;'
+  height: 40px;
+  align-items: center;
+`;
+
+export const HeaderTitle = styled.Text`
+  font-size: 20px;
+`;

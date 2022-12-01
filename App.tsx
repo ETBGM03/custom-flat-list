@@ -1,6 +1,7 @@
 import React from 'react';
 import {useColorScheme} from 'react-native';
 import {ThemeProvider} from 'styled-components';
+import {ProductContextProvider} from './src/context/product-context';
 
 import Home from './src/screens/Home';
 import {
@@ -14,7 +15,9 @@ const App = () => {
   return (
     <ThemeProvider
       theme={isDark ? CustomFlatListDarkTheme : CustomFlatListTheme}>
-      <Home />
+      <ProductContextProvider>
+        <Home />
+      </ProductContextProvider>
     </ThemeProvider>
   );
 };
